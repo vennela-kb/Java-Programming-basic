@@ -1,0 +1,19 @@
+class Class1{
+   //Overridden method
+   public void method1()
+   {
+      System.out.println(" Base class method");
+   }
+}
+class Class2 extends Class1{
+   //Overriding method
+   public void method1(){
+      System.out.println("Derived class method");
+   }
+   public static void main( String args[]) {
+      Class2 obj = new Class2();
+      //This will call the child class version of method1()
+      obj.method1();
+   }
+}
+Derived class method

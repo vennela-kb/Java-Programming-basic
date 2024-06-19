@@ -1,0 +1,18 @@
+//final class
+//We cannot extend a final class. 
+
+final class class1{  
+}  
+	     
+class class2 extends class1{  
+   void demo(){
+      System.out.println("My Method");
+   }  
+   public static void main(String args[]){  
+      class2 obj= new class2(); 
+      obj.demo();
+   }  
+}
+Output:
+
+The type class2 cannot subclass the final class class1

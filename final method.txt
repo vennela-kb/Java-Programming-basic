@@ -1,0 +1,23 @@
+final method
+A final method cannot be overridden.
+ Which means even though a sub class can call the final method of parent class without any issues but it cannot override it.
+
+Example:
+
+class class1{  
+   final void method(){
+      System.out.println("class1 Class Method");
+   }  
+}  
+	     
+class class2 extends class1{  
+   void method(){
+      System.out.println("class2 Class Method");
+   }  
+	     
+   public static void main(String args[]){  
+      class2 obj= new class2();  
+      obj.method();  
+   }  
+}
+compilation error,

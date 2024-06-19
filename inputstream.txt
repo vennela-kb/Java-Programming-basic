@@ -1,0 +1,22 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+public class FileInputStreamExample {
+   public static void main(String args[]) throws IOException {
+      //Creating a File object
+      File file = new File("D:/images/abc.jpg");
+      //Creating a FileInputStream object
+      FileInputStream inputStream = new FileInputStream(file);
+      //Creating a byte array
+      byte bytes[] = new byte[(int) file.length()];
+      //Reading data into the byte array
+      int numOfBytes = inputStream.read(bytes);
+      System.out.println("Data copied successfully...");
+      //Creating a FileInputStream object
+      FileOutputStream outputStream = new FileOutputStream("D:/images/xyz.jpg");
+      //Writing the contents of the Output Stream to a file
+      outputStream.write(bytes);
+      System.out.println("Data written successfully...");
+   }
+}

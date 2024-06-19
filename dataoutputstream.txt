@@ -1,0 +1,29 @@
+import java.io.*;
+
+class A
+{
+public static void main(String... ar)
+{
+try
+{
+FileOutputStream fos= new FileOutputStream("D:\\Text.txt");
+DataOutputStream dos =new DataOutputStream(fos);
+
+dos.writeInt(1985);
+dos.writeDouble(245.45);
+dos.writeChar('c');
+dos.writeBoolean(true);
+dos.writeLong(9999999999999l);
+dos.writeFloat(12.15f);
+System.out.println("Number of bytes written to this stream =  "+ dos.size());
+
+dos.close();
+fos.close();
+}
+catch(IOException e)
+{
+System.out.println(e);
+}
+
+}
+}

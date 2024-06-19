@@ -1,0 +1,34 @@
+//Program to read primitive data types out of a file using DataInputStream
+
+import java.io.*;
+
+class A
+{
+public static void main(String... ar)
+{
+try
+{
+FileInputStream fis=new FileInputStream("D://Text.txt");
+DataInputStream dis =new DataInputStream(fis);
+
+System.out.println("Number of bytes available to read = "+ fis.available());
+
+System.out.println(dis.readInt());
+System.out.println(dis.readDouble());
+System.out.println(dis.readChar());
+System.out.println(dis.readBoolean());
+System.out.println(dis.readLong());
+System.out.println(dis.readFloat());
+
+fis.close();
+dis.close();
+
+}
+catch(IOException e)
+{
+System.out.println(e);
+}
+
+
+}
+}

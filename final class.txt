@@ -1,0 +1,31 @@
+//Final Class
+//Inheritance can be prevented by declareing a class as final.
+final class MethodCircle
+{
+float radius;
+final float pi=3.14;
+MethodCircle(float r)
+{
+radius=r;
+}
+float area()
+{
+return pi*radius*radius;
+}
+}
+float circum()
+{
+return 2*pi*radius;
+}
+class FinalClass
+{
+public static void main(String args[])
+{
+float ac,cc;
+MthodCircle mc=new MtghodCircle(3.5);
+ac=mc.area()'
+cc=mc.circum();
+System.out.println("area of circle=="+ac);
+System.out.println("Circumference of Circle="+cc);
+}
+}
